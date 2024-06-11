@@ -1,0 +1,65 @@
+main {
+    background-color: hsl(216, 29%, 96%);
+}
+
+#btn-tema {
+    border: 2px solid grey;
+}
+
+p {
+    color: #262b44;
+}
+
+a {
+    color: #262b44;
+    background-color: #c0cbdc;
+}
+
+#config {
+    background-image: url("../img/gear.svg");
+}
+
+#icone-lapis {
+    background-image: url("../img/pencil.svg");
+}
+
+#icone-borracha {
+    background-image: url("../img/eraser.svg");
+}
+
+#icone-linha {
+    background-image: url("../img/line.svg");
+}
+
+#icone-cursor {
+    background-image: url("../img/cursor.svg");
+}
+
+#icone-mover {
+    background-image: url("../img/move.svg");
+}
+
+#icone-play {
+    background-image: url("../img/play.svg");
+}
+
+#icone-pause {
+    background-image: url("../img/pause.svg");
+}
+
+#icone-stop {
+    background-image: url("../img/stop.svg");
+}
+
+#menu-opcoes {
+    background-color: #c0cbdc;
+    color: #262b44;
+}
+.botao-menu-estilo {
+    border: solid #262b44 0.5vh;
+    color: #262b44;
+    background-color: #c0cbdc;
+}
+hr{
+    border-top: 0.5vh solid #262b44;
+}

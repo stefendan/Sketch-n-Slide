@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch 'n Slide</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dia.css" id="tema">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+    <script src="./js/muda_tema.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="js/jogo.js"></script>
+
+    <script src="js/Objetos/jogador.js"></script>
+    <script src="js/Objetos/desenho.js"></script>
+    <script src="js/Objetos/bandeira.js"></script>
+   
+</head>
+<body onload="inicializa_selecionados(); canvas(); carrega_input()">
+    <aside id="menu-opcoes">
+        
+        <!-- Escolher áudio-->
+        
+        <h2>Música Personalizada</h2>
+        <label for="musica" class="botao-menu-estilo">
+            Fazer upload
+        </label>
+        <input type="file" id="musica" accept="audio/*">
+        <hr>
+
+        <!--Reposicionar a bandeira-->
+        <h2>Reposicionar Sliders</h2>
+        <label for="reposicionar" class="botao-menu-estilo">
+            Reposicionar Bandeira
+        </label>
+        <button id="reposicionar" onclick="reposicionar_bandeira()" hidden></button>
+
+        <hr>
+        <!--Quantidade de riders-->
+        <h2>Quantidade de Sliders</h2>
+        <select name="qtd-riders" class="botao-menu-estilo" id="input-riders">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+
+        <hr>
+        <!--Skins-->
+        <h2>&#x1F92B; Skins &#x1F92B;</h2>
+        <select name="skin" class="botao-menu-estilo" id="skin-riders">
+            <option value="padrao">Padrão</option>
+            <option value="sugoma1">Amogus V1</option>
+            <option value="sugoma2">Amogus V2</option>
+        </select>
+    </aside>
+    <button id="config" class="icon" onclick="mostra_opcoes()"></button>
+    <main>
+        <nav id="botoes-topo">
+            <span>
+                <input type="radio" name="ferramenta" id="lapis" value="lapis" onchange="atualiza('ferramenta')" checked>
+                <label for="lapis" class="container-icone"> <span id="icone-lapis"></span> </label>
+            </span>
+            <span>
+                <input type="radio" name="ferramenta" id="linha" value="linha" onchange="atualiza('ferramenta')">
+                <label for="linha" class="container-icone"> <span id="icone-linha"></span> </label>
+            </span>
+            <span>
+                <input type="radio" name="ferramenta" id="borracha" value="borracha" onchange="atualiza('ferramenta')">
+                <label for="borracha" class="container-icone"> <span id="icone-borracha"></span> </label>
+            </span>
+            <span>
+                <input type="radio" name="ferramenta" id="cursor" value="cursor" onchange="atualiza('ferramenta')">
+                <label for="cursor" class="container-icone"> <span id="icone-cursor"></span> </label>
+            </span>
+            <span>
+                <input type="radio" name="ferramenta" id="mover" value="mover" onchange="atualiza('ferramenta')">
+                <label for="mover" class="container-icone"> <span id="icone-mover"></span> </label>
+            </span>
+        </nav>
+        <nav id="botoes-cor">
+            <span>
+                <input type="radio" name="cor" id="cor-azul" value="azul" onchange="atualiza('cor')" checked>
+                <label for="cor-azul" class="circulo"></label>
+            </span>
+            <span>
+                <input type="radio" name="cor" id="cor-vermelho" value="vermelho" onchange="atualiza('cor')">
+                <label for="cor-vermelho" class="circulo"></label>
+            </span>
+            <span>
+                <input type="radio" name="cor" id="cor-verde" value="verde" onchange="atualiza('cor')">
+                <label for="cor-verde" class="circulo"></label>
+            </span>
+        </nav>
+        <button id="btn-tema" onclick="desliza_slider()"><span id="slider"></span></button>
+
+        <canvas id="canvas-jogo">  
+            <!--O que estiver dentro da tag só será exibido se o navegador não suportar o canvas-->  
+            <p> O seu navegador não suporta canvas</p>
+        </canvas>
+        <nav id="botoes-tempo">
+            <span>
+                <input type="radio" name="status" id="play" value="play" onclick="atualiza('status')">
+                <label for="play" class="container-icone"> <span id="icone-play"></span> </label>
+            </span>
+            <span>
+                <input type="radio" name="status" id="pause" value="pause" onclick="atualiza('status')" checked>
+                <label for="pause" class="container-icone"> <span id="icone-pause"></span> </label>
+            </span>
+            <span>
+                <input type="radio" name="status" id="stop" value="stop" onclick="atualiza('status')">
+                <label for="stop" class="container-icone"> <span id="icone-stop"></span> </label>
+            </span>
+        </nav>
+
+    </main>
+</body>
+</html>

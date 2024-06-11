@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+} 
+
+body, #canvas-jogo {
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(216, 29%, 96%);
+}
+
+#btn-tema {
+    width: 60px;
+    height: 22px;
+
+    border-radius: 34px;
+
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+
+    display: flex;
+    align-items: center;
+}
+
+#btn-tema:hover {
+    cursor: pointer;
+}
+
+#slider {
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 34px;
+
+    position: relative;
+    left: 0%;
+
+    background-image: url("../img/tema_claro.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: left 0.5s, background-image 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#logo {
+    image-rendering: pixelated;
+    width: 50vw;
+    height: 4/9*100vh;
+}
+
+p {
+    width: 50vw;
+
+    font-size: max(1vw, 1rem);
+    font-weight: 500;
+    text-align: justify;
+}
+
+main>a {
+    width: 15vw;
+    height: 10vh;
+
+    font-size: 2vw;
+    text-decoration: none;
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: solid 1vh;
+    border-radius: 1vh;
+}
+
+#config {
+    position: fixed;
+    top: 7px;
+    left: 7px;
+}
+
+#menu-opcoes {
+    width: 360px;
+    height: 100vh;
+
+    position: fixed;
+    left: -360px;
+    transition: left 0.75s;
+    transition-timing-function: ease-in-out;
+    border-radius: 0 7vh 7vh 0;
+    padding: 3.5vh 45px;
+}
+
+#menu-opcoes > *{
+    margin: 0 0 1vh 0;
+}
+
+.botao-menu-estilo{
+    text-decoration: underline;
+    border-radius: 1vh;
+    font-weight: bold;
+    padding: 0.5em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+#botoes-topo {
+    position: fixed;
+    border: none;
+    top: 0px;
+
+    display: flex;
+}
+
+input[type="radio"] {
+    opacity: 0;
+}
+
+.container-icone {
+    width: 45px;
+    height: 45px;
+    border-radius: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    transition: background-color 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.container-icone>span,
+#config {
+    width: 30px;
+    height: 30px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+
+    border: none;
+}
+
+input[name="ferramenta"]:checked+label,
+input[name="status"]:checked+label {
+    background-color: cadetblue;
+}
+
+#botoes-cor {
+    position: fixed;
+    border: none;
+    top: 75px;
+
+    padding: 5px 0px;
+    display: flex;
+}
+
+#botoes-cor span {
+    width: 50px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 34px;
+    transition: width 0.2s, height 0.2s !important;
+}
+
+input[name="cor"]:checked+label {
+    width: 30px;
+    height: 30px;
+}
+
+#botoes-cor *:hover {
+    filter: brightness(130%);
+    transition: 0.2s !important;
+    transition-timing-function: ease-in-out;
+}
+
+#cor-azul+label {
+    background-color: #3a55db;
+}
+
+#cor-vermelho+label {
+    background-color: #e44056;
+}
+
+#cor-verde+label {
+    background-color: #34c56c;
+}
+
+#cor-azul:hover+label {
+    box-shadow: 0 0 50px 8px #3a55db;
+}
+
+#cor-vermelho:hover+label {
+    box-shadow: 0 0 50px 8px #e44056;
+}
+
+#cor-verde:hover+label {
+    box-shadow: 0 0 50px 8px #34c56c;
+}
+
+#botoes-tempo {
+    position: fixed;
+    border: none;
+    bottom: 7px;
+
+    display: flex;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+hr{
+    border-radius: 0.5vh;
+    margin-top: 2vh !important;
+}

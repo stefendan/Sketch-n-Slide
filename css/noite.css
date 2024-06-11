@@ -1,0 +1,67 @@
+main {
+    background-color: hsl(230, 28%, 27%);
+}
+
+#btn-tema {
+    background-color: #262b44;
+    border: 2px solid #c0cbdc;
+}
+
+p {
+    color: #c0cbdc;
+}
+
+a {
+    color: #c0cbdc;
+    background-color: #262b44;
+}
+
+#config {
+    background-image: url("../img/gear_dark.svg");
+}
+
+#icone-lapis {
+    background-image: url("../img/pencil_dark.svg");
+}
+
+#icone-borracha {
+    background-image: url("../img/eraser_dark.svg");
+}
+
+#icone-linha {
+    background-image: url("../img/line_dark.svg");
+}
+
+#icone-cursor {
+    background-image: url("../img/cursor_dark.svg");
+}
+
+#icone-mover {
+    background-image: url("../img/move_dark.svg");
+}
+
+#icone-play {
+    background-image: url("../img/play_dark.svg");
+}
+
+#icone-pause {
+    background-image: url("../img/pause_dark.svg");
+}
+
+#icone-stop {
+    background-image: url("../img/stop_dark.svg");
+}
+
+#menu-opcoes {
+    background-color: #262b44;
+    color: #c0cbdc;
+}
+.botao-menu-estilo {
+    border: solid #c0cbdc 0.5vh;
+    background-color: #262b44;
+    color: #c0cbdc;
+}
+
+hr{
+    border-top: 0.5vh solid #c0cbdc;
+}
